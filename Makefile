@@ -18,7 +18,7 @@ all: $(IMG)
 $(BOOT): boot.asm
 	$(NASM) -f bin -o $(BOOT) boot.asm
 
-$(KERNEL): kernel.asm
+$(KERNEL): kernel.asm ui.asm apps.asm
 	$(NASM) -f bin -o $(KERNEL) kernel.asm
 
 $(IMG): $(BOOT) $(KERNEL)
